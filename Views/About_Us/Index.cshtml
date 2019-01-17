@@ -1,0 +1,19 @@
+﻿@model MvcApplication7.Employee_Form_TB
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Welcome to sway. </h2>
+
+<html>
+<body>
+    <p id="intro"> "Hello Ankita..!!"" </p>
+    <p> This is an element content. </p>
+    <p id="demo"></p>
+</body>
+<script>
+    var element = document.getElementById("intro");
+    document.getElementById("demo").innerHTML = "She is the Employeee of Softway Welcome her." + element.innerHTML;
+</script>
+</html>

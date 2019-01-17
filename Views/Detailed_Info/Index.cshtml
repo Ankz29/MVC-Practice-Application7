@@ -1,0 +1,33 @@
+﻿@model MvcApplication7.Employee_Form_TB 
+
+@{
+    ViewBag.Title = "Employee's Detailed information";
+    Layout = "~/Views/Layout/Header_Footer.cshtml";  
+
+}
+
+
+<h2>Employee's Detailed information</h2>
+<table border="1">
+    <thead><tr>
+    <th> First Name:</th>
+    <th>Last Name:</th>
+    <th> ID :</th>
+    <th> Gender :</th>
+    <th>  Salary:</th>
+    <th>  Email:</th>
+</tr>    </thead>
+    <tr>
+        <td> @Model.Employee_FirstName</td>
+        <td> @Model.Employee_LastName</td>
+        <td> @Model.Employee_Id</td>
+        <td> @Model.Employee_Gender</td>
+        <td> @Model.Employee_Salary</td>
+        <td> @Model.Employee_Email</td>
+    </tr>
+</table>
+
+
+
+      
+  

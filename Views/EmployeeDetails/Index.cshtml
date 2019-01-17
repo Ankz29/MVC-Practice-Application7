@@ -1,0 +1,52 @@
+﻿@model List<MvcApplication7.Employee_Form_TB>
+<style>
+    table, th, td{
+        border: 1px solid black;
+    }
+</style>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Header_Footer.cshtml"; 
+
+
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <th> FirstName:</th>
+            <th><b> LastName: </b></th>
+            <th><b> Id</b></th>
+            <th> <b> Gender</b></th>
+            <th> <b> Email </b></th>
+            <th> <b> Salary </b></th>
+
+        </tr>
+    </thead>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>
+                @emp.Employee_FirstName</td>
+            
+            <td>
+                @emp.Employee_LastName</td>
+            
+            <td>
+                <a href="~/Detailed_Info/Index/@emp.Employee_Id"> @emp.Employee_Id </a></td>
+            
+            <td>
+                @emp.Employee_Gender</td>
+           
+            <td>
+                @emp.Employee_Email</td>
+            
+            <td>
+                @emp.Employee_Salary</td>
+            
+
+        </tr>
+    }
+   
+</table>

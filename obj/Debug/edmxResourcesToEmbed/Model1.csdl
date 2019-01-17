@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Employee_Form_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee_Form_TB">
+    <Key>
+      <PropertyRef Name="Employee_Id" />
+    </Key>
+    <Property Name="Employee_FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Salary" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Employee_Form_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employee_Form_TB" EntityType="Self.Employee_Form_TB" />
+  </EntityContainer>
+</Schema>

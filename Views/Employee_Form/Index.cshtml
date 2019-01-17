@@ -1,0 +1,79 @@
+﻿@model MvcApplication7.Models.Employee_Form
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Header_Footer.cshtml"; 
+}
+<link href="~/styles/style.css" rel="stylesheet" />
+<html>
+<body>
+    <h2> Employee Form:  </h2>
+
+        @using (Html.BeginForm("Index", "Employee_Form", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="formheight">
+        <table>
+            <tr>
+                <td>
+                    <b> FirstName:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Employee_FirstName) </td>
+                <td>@Html.ValidationMessageFor(m => m.Employee_FirstName)</td>
+            </tr>
+            <tr>
+                <td>
+                    <b> LastName:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Employee_LastName)</td>
+                <td>  @Html.ValidationMessageFor(m => m.Employee_LastName)</td> 
+            </tr>
+            <tr>
+                <td>
+                    <b>Id:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Employee_Id) </td>
+            </tr>
+            <tr>
+                <td>
+                    <b> Gender:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Gender) </td>
+            </tr>
+            <tr>
+                <td>
+                    <b> Salary:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Employee_Salary) </td>
+            </tr>
+            <tr>
+                <td>
+                    <b> Email:</b>
+                </td>
+                <td>@Html.TextBoxFor(m => m.Employee_Email) </td>
+                <td>  @Html.ValidationMessageFor(m => m.Employee_Email)</td>
+
+            </tr>
+            <tr>
+                <td> <b> Attach Picture: </b></td>
+                <td>@Html.TextBox("file", "", new { type = "file" })</td>
+
+
+
+                @ViewBag.Message
+            </tr>
+            <tr>
+
+                <td> <input type="submit" value="submit" /></td>
+            </tr>
+
+        </table>
+
+        @TempData["SuccessMessage"]
+    </div>
+}
+   
+
+</body>
+</html>
+
+

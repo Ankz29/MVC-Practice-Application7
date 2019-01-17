@@ -1,0 +1,34 @@
+﻿@model MvcApplication7.Employee_Form_TB
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Header_Footer.cshtml"; 
+}
+
+<html>
+<head>
+    <script>
+        <!--
+        function getConfirmation()
+        {
+            var returnVal = confirm("do you want to continue?");
+            if (returnVal == true) {
+                document.write("user wants to continue");
+                return true;
+            }
+            else {
+
+                document.write("user wants to end");
+            }
+        }
+        //-->
+    </script>
+</head>
+<body>
+    <p> Kindly click to view the content</p>
+    <form>
+        <input type="button" onclick="getConfirmation()" value="Click Me" /> 
+    </form>
+</body>
+</html>
+   

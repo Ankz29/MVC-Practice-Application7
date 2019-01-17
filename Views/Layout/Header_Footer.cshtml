@@ -1,0 +1,36 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+
+<head>
+    
+    <title>@ViewBag.Title </title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"> </script> 
+</head>
+<body>
+    <a href="~/Home/Index">Home </a>  &nbsp;   &nbsp;   &nbsp;                     //Header-content// 
+    <a href="~/About_Us/Index"> About_Us  </a>  &nbsp;   &nbsp;   &nbsp;
+    <a href="~/Contact_Us/Index">Contact_Us</a>  
+
+    <table>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <h1 style="color:purple"> Employee Information </h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2> @RenderBody() </h2>                      //main body content//
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center; font-size: x-small">
+                <h1 style="color:blue"> ©[Softway Solutions]  </h1>              //footer-content//
+            </td>
+        </tr>
+    </table>
+</body>
+
